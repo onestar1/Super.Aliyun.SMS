@@ -36,23 +36,15 @@ namespace Super.Aliyun.SMS
                 .AddSiteDisplayDriver<AliyunSettingsDisplayDriver>();
             services.AddNavigationProvider<AdminMenu>();
         }
-  
-        [Feature("OrchardCore.Notifications.Sms")]
-        public sealed class NotificationsStartup : StartupBase
-        {
-            public override void ConfigureServices(IServiceCollection services)
-            {
-                services.AddScoped<INotificationMethodProvider, SmsNotificationProvider>();
-            }
-        }
-       // [RequireFeatures("OrchardCore.Workflows")]
-        public sealed class WorkflowsAliyunStartup : StartupBase
-        {
-            public override void ConfigureServices(IServiceCollection services)
-            {
-                services.AddActivity<AliyunSmsTask, AliyunSmsTaskDisplayDriver>();
-            }
-        }
-
     }
+    [RequireFeatures("OrchardCore.Workflows")]
+    public sealed class WorkflowsAliyunStartup : StartupBase
+    {
+        public override void ConfigureServices(IServiceCollection services)
+        {
+            services.AddActivity<AliyunSmsTask, AliyunSmsTaskDisplayDriver>();
+        }
+    }
+
+ 
 }

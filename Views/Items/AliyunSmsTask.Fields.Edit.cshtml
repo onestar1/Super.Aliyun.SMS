@@ -1,5 +1,4 @@
-@using OrchardCore.Sms.ViewModels
-@using Super.Aliyun.SMS.ViewModels
+ @using Super.Aliyun.SMS.ViewModels
 
 @model AliyunSmsTaskViewModel
 
@@ -13,7 +12,7 @@
 <div class="mb-3" id="body">
     <label asp-for="Body" class="form-label">@T["Body"]</label>
     <textarea asp-for="Body" rows="5" class="form-control"></textarea>
-    <span class="hint">@T["The body of the SMS message. With Liquid support."]</span>
+    <span class="hint">@T["The body of the SMS message. With Liquid support.like code: '2345'"]</span>
 </div>
 <div class="mb-3" asp-validation-class-for="TemplateCode">
     <label asp-for="TemplateCode" class="form-label">@T["TemplateCode"]</label>

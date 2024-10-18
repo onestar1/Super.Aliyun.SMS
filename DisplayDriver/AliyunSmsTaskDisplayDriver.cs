@@ -44,8 +44,14 @@ namespace Super.Aliyun.SMS.DisplayDriver
             model.Body = activity.Body.Expression;
             model.TemplateCode = activity.TemplateCode.Expression;
             model.SignName = activity.SignName.Expression;
-        }
+           
+        } 
 
+        //public override IDisplayResult Edit(AliyunSmsTask activity, BuildEditorContext context)
+        //{
+        //    return Initialize<AliyunSmsTaskViewModel>("AliyunSmsTask_Fields_Edit", viewModel => EditActivityAsync(activity, viewModel))
+        //        .Location("Content");
+        //}
         public override async Task<IDisplayResult> UpdateAsync(AliyunSmsTask activity, UpdateEditorContext context)
         {
             var viewModel = new AliyunSmsTaskViewModel();

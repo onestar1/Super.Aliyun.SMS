@@ -4,8 +4,7 @@ using OrchardCore.Modules.Manifest;
     Name = "Super.Aliyun.SMS",
     Author = "hengdefeng-zxs",
     Website = "https://hengdefeng99.com",
-    Version = "0.0.1"
-
+    Version = "0.1.0"
 )]
 
 
@@ -16,6 +15,7 @@ using OrchardCore.Modules.Manifest;
     Dependencies =
     [
         "OrchardCore.Sms",
+        "AlibabaCloud.SDK.Dysmsapi20170525"
     ],
     Category = "SMS"
 )]
