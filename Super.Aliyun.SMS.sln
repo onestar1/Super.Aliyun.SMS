@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Super.Aliyun.SMS", "Super.Aliyun.SMS.csproj", "{A6D5431F-563D-4F90-B9C0-42720BF42182}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6D5431F-563D-4F90-B9C0-42720BF42182}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6D5431F-563D-4F90-B9C0-42720BF42182}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6D5431F-563D-4F90-B9C0-42720BF42182}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6D5431F-563D-4F90-B9C0-42720BF42182}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9766D987-1FE9-4509-B004-971B4A086124}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,44 @@
+@using OrchardCore.Sms.Services
+@using OrchardCore.Sms.ViewModels
+@using OrchardCore.Sms
+@using Super.Aliyun.SMS.ViewModels
+
+
+@model AliyunSettingsViewModel
+
+<div class="mb-3">
+    <div class="form-check">
+        <input type="checkbox" class="form-check-input" asp-for="IsEnabled" checked="@Model.IsEnabled" role="button" data-bs-toggle="collapse" data-bs-target="#Aliyun_Provider_Settings" aria-expanded="@Model.IsEnabled.ToString().ToLowerInvariant()" aria-controls="Aliyun_Provider_Settings" />
+        <label class="form-check-label" asp-for="IsEnabled">@T["Enable Aliyun Provider"]</label>
+    </div>
+</div>
+
+<div id="Aliyun_Provider_Settings" class="collapse @(Model.IsEnabled ? " show" : string.Empty)">
+
+    <h4>@T["Aliyun Account Info"]</h4>
+    <div class="mb-3" asp-validation-class-for="AccessKeyId">
+        <label asp-for="AccessKeyId" class="form-label">@T["AccessKeyId"]</label>
+        <input asp-for="AccessKeyId" class="form-control" />
+        <span asp-validation-for="AccessKeyId"></span>
+        <span class="hint">@T["AccessKeyId must include a country code."]</span>
+    </div>
+
+    <div class="mb-3" asp-validation-class-for="AccessKeySecret">
+        <label asp-for="AccessKeySecret" class="form-label">@T["AccessKeySecret"]</label>
+        <input asp-for="AccessKeySecret" class="form-control" />
+        <span asp-validation-for="AccessKeySecret"></span>
+        <span class="hint">@T["AccessKeySecret must include a country code."]</span>
+    </div>
+    <div class="mb-3" asp-validation-class-for="SignName">
+        <label asp-for="SignName" class="form-label">@T["SignName"]</label>
+        <input asp-for="SignName" class="form-control" />
+        <span asp-validation-for="SignName"></span>
+    </div>
+    <div class="mb-3" asp-validation-class-for="TemplateCode">
+        <label asp-for="TemplateCode" class="form-label">@T["TemplateCode"]</label>
+        <input asp-for="TemplateCode" class="form-control" />
+        <span asp-validation-for="TemplateCode"></span>
+    </div>
+
+ 
+</div>
